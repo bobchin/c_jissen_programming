@@ -1,1 +1,1 @@
-# c_jissen_programming
+# C実践プログラミング第3版のメモなど
