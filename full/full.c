@@ -7,8 +7,11 @@ char full_name[200];
 
 int main()
 {
-  strcpy(first, "Steve");
-  strcpy(last, "Oualline");
+  printf("Enter first name:");
+  fgets(first, sizeof(first), stdin);
+  printf("Enter last name:");
+  fgets(last, sizeof(last), stdin);
+
   strcpy(full_name, first);
 
   strcat(full_name, " ");
