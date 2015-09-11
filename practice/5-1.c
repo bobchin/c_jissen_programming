@@ -7,4 +7,5 @@ int main()
   kasi = (9 / 5 * sesi) + 32;
 
   printf("C is %f. F is %f\n", sesi, kasi);
+  return (0);
 }
