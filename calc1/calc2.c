@@ -15,12 +15,26 @@ int main(){
     fgets(line, sizeof(line), stdin);
     sscanf(line, "%c %d", &operator, &value);
 
+    if ((operator == 'q') || (operator == 'Q')) {
+      break;
+    }
+
     if (operator == '+') {
       result += value;
+    } else if (operator == '-') {
+      result -= value;
+    } else if (operator == '*') {
+      result *= value;
+    } else if (operator == '/') {
+      if (value == 0) {
+        printf("Error: Divide by zero\n");
+        printf("    operation ignored\n");
+      } else {
+        result /= value;
+      }
     } else {
       printf("Unknown operator %c\n", operator);
     }
   }
-
   return (0);
 }
