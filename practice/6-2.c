@@ -2,7 +2,7 @@
 #include <string.h>
 
 char line[80];
-float ratio;
+int ratio;
 char result[80];
 
 int main()
@@ -15,7 +15,7 @@ int main()
       break;
     }
 
-    sscanf(line, "%f", &ratio);
+    sscanf(line, "%d", &ratio);
 
     strcpy(result, "Enter rate (0 - 100)");
     if (0 <= ratio && ratio <= 60) {
