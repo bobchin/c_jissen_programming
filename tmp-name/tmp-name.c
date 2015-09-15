@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-char name[30];
-
 /*
  * tmp_name -- 一時的なファイル名を返す
  *
@@ -13,6 +11,7 @@ char name[30];
  */
 char *tmp_name(void)
 {
+  static char name[30];
   static int sequence = 0;
 
   ++sequence;
