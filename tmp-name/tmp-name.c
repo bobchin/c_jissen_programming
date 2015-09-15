@@ -26,7 +26,13 @@ char *tmp_name(void)
 int main()
 {
   char *tmp_name(void);
+  char *name1;
+  char *name2;
 
-  printf("Name: %s\n", tmp_name());
+  name1 = tmp_name();
+  name2 = tmp_name();
+
+  printf("Name1: %s\n", name1);
+  printf("Name2: %s\n", name2);
   return (0);
 }
