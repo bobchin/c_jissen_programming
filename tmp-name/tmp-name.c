@@ -26,11 +26,11 @@ char *tmp_name(void)
 int main()
 {
   char *tmp_name(void);
-  char *name1;
-  char *name2;
+  char name1[100];
+  char name2[100];
 
-  name1 = tmp_name();
-  name2 = tmp_name();
+  strcpy(name1, tmp_name());
+  strcpy(name2, tmp_name());
 
   printf("Name1: %s\n", name1);
   printf("Name2: %s\n", name2);
