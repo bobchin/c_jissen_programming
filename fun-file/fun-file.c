@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {
@@ -8,6 +9,7 @@ int main()
 
   printf("Name? ");
   fgets(name, sizeof(name), stdin);
+  name[strlen(name) - 1] = '\0';
 
   in_file = fopen(name, "r");
   if (in_file == NULL) {
