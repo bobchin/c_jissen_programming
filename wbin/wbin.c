@@ -9,7 +9,7 @@ int main()
   int cur_char;
   FILE *out_file;
 
-  out_file = fopen("test.out", "w");
+  out_file = fopen("test.out", "wb");
   if (out_file == NULL) {
     fprintf(stderr, "Cannot open output file\n");
     exit(8);
