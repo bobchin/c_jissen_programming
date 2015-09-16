@@ -4,7 +4,7 @@
  * 無限配列は必要に応じてサイズが大きくなる配列である。
  * 配列に最初の指定以上の要素を追加すると配列は大きくなる。
  * --------------------------------------------
- * 構造体 infinity_array
+ * 構造体 infinite_array
  *       無限配列に関する情報を格納するために使用
  * --------------------------------------------
  * ルーチン
@@ -17,12 +17,12 @@
 /* 無限配列の各セルに格納する要素の数 */
 #define BLOCK_SIZE 10
 
-struct infinity_array {
+struct infinite_array {
   /* このブロックのデータ */
   float data[BLOCK_SIZE];
 
   /* 次の配列へのポインタ */
-  struct infinity_array *next;
+  struct infinite_array *next;
 };
 
 /*
@@ -45,7 +45,7 @@ struct infinity_array {
  * 注意：前もって格納していない要素を取得することが可能である。
  *      未初期化の要素の値はすべて0となる。
  */
-extern int ia_get(struct infinity_array *array_ptr, int index);
+extern int ia_get(struct infinite_array *array_ptr, int index);
 
 /*
  * ia_store -- 無限配列に要素を格納
@@ -55,4 +55,4 @@ extern int ia_get(struct infinity_array *array_ptr, int index);
  *     index -- 配列のインデックス
  *     store_data -- 格納するデータ
  */
-extern void ia_store(struct infinity_array *array_ptr, int index, int store_data);
+extern void ia_store(struct infinite_array *array_ptr, int index, int store_data);
