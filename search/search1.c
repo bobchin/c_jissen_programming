@@ -56,6 +56,7 @@ int main()
       printf("%d %d %d %d\n", middle, search, low, high);
       if (data[middle] == search) {
         printf("Found at index %d\n", middle);
+        break;
       }
 
       if (low == high) {
