@@ -52,22 +52,22 @@ int main()
     high = max_count;
 
     while (1) {
+      if (low >= high) {
+        printf("Not found\n");
+        break;
+      }
+
       middle = (low + high) / 2;
-      printf("%d %d %d %d\n", middle, search, low, high);
+
       if (data[middle] == search) {
         printf("Found at index %d\n", middle);
         break;
       }
 
-      if (low == high) {
-        printf("Not found\n");
-        break;
-      }
-
       if (data[middle] < search)
-        low = middle;
+        low = middle + 1;
       else
-        high = middle;
+        high = middle - 1;
     }
   }
   return (0);
