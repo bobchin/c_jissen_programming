@@ -36,7 +36,7 @@ int main()
     if (fgets(line, sizeof(line), in_file) == NULL)
       break;
 
-    sscanf(line, "%d", data[max_count]);
+    sscanf(line, "%d", &data[max_count]);
     ++max_count;
   }
 
